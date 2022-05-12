@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "루나소프트 카카오 챗봇 연동 데이터 스키마 테스팅 툴",
+  "name": "루나소프트 카카오 챗봇 연동 데이터 스키마 테스팅 툴",
   "icons": [
     {
       "src": "favicon.ico",

@@ -22,47 +22,47 @@ export class ProductCounterContainer {
 export class Product {
   @IsNumber()
   @Expose({ name: "product_no" })
-  productNo: number;
+  product_no: number;
 
   @IsString()
   @Expose({ name: "product_name" })
-  productName: string;
+  product_ame: string;
 
   @IsNumber()
   @Expose({ name: "product_price" })
-  productPrice: number;
+  product_price: number;
 
   @IsNumber()
   @Expose({ name: "product_discount_price" })
-  productDiscountPrice: number;
+  product_discount_price: number;
 
   @IsBoolean()
   @Expose({ name: "display_yn" })
-  displayYn: boolean;
+  display_yn: boolean;
 
   @IsBoolean()
   @Expose({ name: "soldout_yn" })
-  soldoutYn: boolean;
+  soldout_yn: boolean;
 
   @IsBoolean()
   @Expose({ name: "sell_yn" })
-  sellYn: boolean;
+  sell_yn: boolean;
 
   @IsString()
   @Expose({ name: "product_thumbnail_image_url" })
-  productThumbnailImageUrl: string;
+  product_thumbnail_image_url: string;
 
   @IsString()
   @Expose({ name: "product_detail_url" })
-  productDetailUrl: string;
+  product_detail_url: string;
 
   @IsDateString()
   @Expose({ name: "product_register_date" })
-  productRegisterDate: Date;
+  product_register_date: Date;
 
   @IsDateString()
   @Expose({ name: "product_modify_date" })
-  productModifyDate: Date | null;
+  product_modify_date: Date | null;
 }
 
 export class ProductListContainer {

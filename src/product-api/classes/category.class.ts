@@ -1,5 +1,12 @@
 import { Expose, Type } from "class-transformer";
-import { IsBoolean, IsNumber, IsString, ValidateNested } from "class-validator";
+import {
+  ArrayMinSize,
+  IsBoolean,
+  IsNumber,
+  IsObject,
+  IsString,
+  ValidateNested
+} from "class-validator";
 
 export class CategoryCounterContainer {
   @IsNumber()
@@ -9,34 +16,36 @@ export class CategoryCounterContainer {
 export class Category {
   @IsNumber()
   @Expose({ name: "category_no" })
-  categoryNo: number;
+  category_no: number;
 
   @IsString()
   @Expose({ name: "category_name" })
-  categoryName: string;
+  category_name: string;
 
   @IsNumber()
   @Expose({ name: "category_depth" })
-  categoryDepth: number;
+  category_depth: number;
 
   @IsString()
   @Expose({ name: "root_category_no" })
-  rootCategoryNo: string;
+  root_category_no: string;
 
   @IsString()
   @Expose({ name: "parent_category_no" })
-  parentCategoryNo: string | null;
+  parent_category_no: string | null;
 
+  @IsObject()
   @Expose({ name: "full_category_no" })
-  fullCategoryNo: string;
+  full_category_no: Record<string, any>;
 
   @IsBoolean()
   @Expose({ name: "use_yn" })
-  useYn: boolean;
+  use_yn: boolean;
 }
 
 export class CategoryListContainer {
-  @ValidateNested()
+  @ArrayMinSize(1)
+  @ValidateNested({ each: true })
   @Type(() => Category)
   category: Category[];
 }
