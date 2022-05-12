@@ -74,7 +74,7 @@ export const ApiValidator: React.FC<{
             onChange={testingTargetTextareaOnchangeHandler}
             value={testingTargetRaw}
             rows={2}
-            className="border w-full p-3 rounded-xl border-zinc-400"
+            className="border w-full p-3 rounded-xl border-zinc-400 rounded-br-none"
           ></textarea>
         </div>
         <div className="flex-1">
