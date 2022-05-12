@@ -21,8 +21,10 @@ function App() {
           입력된 데이터가 루나소프트에서 제시하는 올바른 '상품 및 카테고리'
           데이터 스키마에 맞게 정의되어 있는지 테스트한다.
           <br />
-          <br />각 항목에 대해 모범 예시값이 주어진다. 모든 항목이 "테스트
-          통과"를 표시하고 있으면 테스트 통과이다.
+          <br />각 항목에 대해 <span className="font-bold">모범 예시값</span>이
+          주어진다. 모든 항목이{" "}
+          <span className=" bg-green-400 px-2 py-1 rounded-md">초록색</span>의
+          "테스트 통과"를 표시하고 있으면 테스트 통과이다.
           <br />각 항목에 대한 스키마 정의는{" "}
           <span className="font-bold">API 문서</span>를 확인하면 된다.
           <br />

@@ -10,11 +10,15 @@ export const ApiValidator: React.FC<{
   const [testingTargetRaw, setTestingTargetRaw] = useState(
     defaultValue ?? "{}"
   );
+  const [isEverChanged, setIsEverChanged] = useState(false);
   const errors: string[] = [];
 
   const testingTargetTextareaOnchangeHandler = (
     e: React.ChangeEvent<HTMLTextAreaElement>
-  ) => setTestingTargetRaw(e.target.value);
+  ) => {
+    setTestingTargetRaw(e.target.value);
+    setIsEverChanged(true);
+  };
 
   try {
     const jsonParsedTestingTarget = JSON.parse(testingTargetRaw);
@@ -76,6 +80,17 @@ export const ApiValidator: React.FC<{
             rows={2}
             className="border w-full p-3 rounded-xl border-zinc-400 rounded-br-none"
           ></textarea>
+          <div className="text-right">
+            <span
+              className="text-sm text-red-600 underline cursor-pointer hover:text-red-400 active:text-red-900"
+              onClick={() => {
+                setTestingTargetRaw("");
+                setIsEverChanged(true);
+              }}
+            >
+              입력창 비우기
+            </span>
+          </div>
         </div>
         <div className="flex-1">
           <label className=" text-sm mb-1 font-bold text-zinc-700">
@@ -83,14 +98,20 @@ export const ApiValidator: React.FC<{
           </label>
           <div
             className={`p-3 pl-10 rounded-xl ${
-              errors.length > 0 ? "bg-amber-400" : "bg-green-400"
+              isEverChanged === false
+                ? "bg-amber-400"
+                : errors.length === 0
+                ? "bg-green-400"
+                : "bg-red-500 text-white"
             }`}
           >
             <ul className="list-disc">
               {errors.length > 0 ? (
                 errors.map((e) => <li key={e}>{e}</li>)
               ) : (
-                <li>테스트 통과</li>
+                <li>
+                  테스트 통과 {isEverChanged ? "" : "(초기값 기반 테스트)"}
+                </li>
               )}
             </ul>
           </div>
