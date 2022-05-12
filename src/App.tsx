@@ -12,13 +12,14 @@ function App() {
   return (
     <div className=" max-w-6xl mx-auto px-10 flex flex-col gap-14 my-20">
       <h1 className=" text-5xl font-bold break-normal">
-        루나소프트 카카오 챗봇 연동 데이터 <br />
+        루나소프트 카카오 챗봇 연동 '상품 및 카테고리' 데이터 <br />
         스키마 테스팅 툴
       </h1>
       <div>
         <div className="text-sm font-bold">설명</div>
         <p className=" text-lg">
-          데이터가 올바른 스키마에 맞게 정의되어 있는지 테스트한다.
+          입력된 데이터가 루나소프트에서 제시하는 올바른 '상품 및 카테고리'
+          데이터 스키마에 맞게 정의되어 있는지 테스트한다.
           <br />
           <br />각 항목에 대해 모범 예시값이 주어진다. 모든 항목이 "테스트
           통과"를 표시하고 있으면 테스트 통과이다.
@@ -34,12 +35,12 @@ function App() {
         </p>
       </div>
       <ApiValidator
-        apiName="쇼핑몰 카테고리 개수 조회"
+        apiName="카테고리 개수 조회"
         cls={CategoryCounterContainer}
         defaultValue={'{"count": 3}'}
       />
       <ApiValidator
-        apiName="쇼핑몰 카테고리 목록 조회"
+        apiName="카테고리 목록 조회"
         cls={CategoryListContainer}
         defaultValue={
           '{"category":[{"full_category_no":{"1":10000,"2":0,"3":0,"4":0},"category_name":"LUSH","root_category_no":"10000","use_yn":true,"category_no":10000,"parent_category_no":"0","category_depth":1},{"full_category_no":{"1":10000,"2":10001,"3":0,"4":0},"category_name":"제품","root_category_no":"10000","use_yn":true,"category_no":10001,"parent_category_no":"10000","category_depth":2}]}'
