@@ -1,16 +1,10 @@
 import { Expose, Type } from "class-transformer";
 import {
   ArrayMinSize,
-  arrayMinSize,
-  IsArray,
   IsBoolean,
-  IsDate,
   IsDateString,
-  IsNotEmptyObject,
   IsNumber,
-  IsObject,
   IsString,
-  MinLength,
   ValidateNested
 } from "class-validator";
 

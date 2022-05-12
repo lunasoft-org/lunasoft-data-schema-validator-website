@@ -32,13 +32,13 @@ export const ApiValidator: React.FC<{
       Object.entries(e.constraints ?? {}).map(([key, value]) =>
         errors.push(`오류 발견: ${value} ('${key}' error)`)
       );
-      e.children?.map((eNested) => {
-        eNested.children?.map((eNestedNested) => {
+      e.children?.map((eNested) =>
+        eNested.children?.map((eNestedNested) =>
           Object.entries(eNestedNested.constraints ?? {}).map(([key, value]) =>
             errors.push(`오류 발견: ${value} ('${key}' error)`)
-          );
-        });
-      });
+          )
+        )
+      );
     });
   } catch (error) {
     if (error instanceof SyntaxError) {
