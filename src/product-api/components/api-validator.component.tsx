@@ -61,8 +61,8 @@ export const ApiValidator: React.FC<{
           기능에 대한 대한 데이터 스키마 테스트
         </span>
       </h2>
-      <div className="flex gap-3">
-        <div className="flex-1">
+      <div className="flex gap-3 flex-col md:flex-row">
+        <div className="md:flex-1">
           <label
             htmlFor={apiName}
             className="text-sm mb-1 font-bold text-zinc-700"
@@ -92,7 +92,7 @@ export const ApiValidator: React.FC<{
             </span>
           </div>
         </div>
-        <div className="flex-1">
+        <div className="md:flex-1">
           <label className=" text-sm mb-1 font-bold text-zinc-700">
             테스트 결과
           </label>
