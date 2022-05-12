@@ -84,7 +84,7 @@ export const ApiValidator: React.FC<{
             <span
               className="text-sm text-red-600 underline cursor-pointer hover:text-red-400 active:text-red-900"
               onClick={() => {
-                setTestingTargetRaw("");
+                setTestingTargetRaw("{}");
                 setIsEverChanged(true);
               }}
             >
