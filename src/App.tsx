@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  CategoryCounterContainer,
+  CategoryListContainer
+} from "./product-api/classes/category.class";
+import {
+  ProductCounterContainer,
+  ProductListContainer
+} from "./product-api/classes/product.class";
+import { ApiValidator } from "./product-api/components/api-validator.component";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ApiValidator cls={CategoryCounterContainer} />
+      <ApiValidator cls={CategoryListContainer} />
+      <ApiValidator cls={ProductCounterContainer} />
+      <ApiValidator cls={ProductListContainer} />
     </div>
   );
 }

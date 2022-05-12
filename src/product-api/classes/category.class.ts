@@ -1,5 +1,10 @@
-import { Expose } from "class-transformer";
-import { IsBoolean, IsNumber, IsString } from "class-validator";
+import { Expose, Type } from "class-transformer";
+import { IsBoolean, IsNumber, IsString, ValidateNested } from "class-validator";
+
+export class CategoryCounterContainer {
+  @IsNumber()
+  count: number;
+}
 
 export class Category {
   @IsNumber()
@@ -28,4 +33,10 @@ export class Category {
   @IsBoolean()
   @Expose({ name: "use_yn" })
   useYn: boolean;
+}
+
+export class CategoryListContainer {
+  @ValidateNested()
+  @Type(() => Category)
+  category: Category[];
 }

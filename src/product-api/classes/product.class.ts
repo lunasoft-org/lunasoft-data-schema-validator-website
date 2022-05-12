@@ -1,5 +1,23 @@
-import { Expose } from "class-transformer";
-import { IsBoolean, IsDate, IsNumber, IsString } from "class-validator";
+import { Expose, Type } from "class-transformer";
+import {
+  ArrayMinSize,
+  arrayMinSize,
+  IsArray,
+  IsBoolean,
+  IsDate,
+  IsDateString,
+  IsNotEmptyObject,
+  IsNumber,
+  IsObject,
+  IsString,
+  MinLength,
+  ValidateNested
+} from "class-validator";
+
+export class ProductCounterContainer {
+  @IsNumber()
+  count: number;
+}
 
 export class Product {
   @IsNumber()
@@ -38,11 +56,18 @@ export class Product {
   @Expose({ name: "product_detail_url" })
   productDetailUrl: string;
 
-  @IsDate()
+  @IsDateString()
   @Expose({ name: "product_register_date" })
   productRegisterDate: Date;
 
-  @IsDate()
+  @IsDateString()
   @Expose({ name: "product_modify_date" })
   productModifyDate: Date | null;
+}
+
+export class ProductListContainer {
+  @ArrayMinSize(1)
+  @ValidateNested({ each: true, always: true })
+  @Type(() => Product)
+  product: Product[];
 }
