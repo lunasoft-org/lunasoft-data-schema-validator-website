@@ -29,13 +29,13 @@ function App() {
           의 "테스트 통과"를 표시하고 있으면 테스트 통과이다.
           <br />각 항목에 대한 스키마 정의는{" "}
           <span className="font-bold">API 문서</span>를 확인하면 된다.
-          <br />
+          {/* <br />
           <br />
           '유저/주문' API에 대한 테스트는{" "}
           <a className=" underline text-blue-700" href="/">
             다른 페이지
           </a>
-          에서 진행한다.
+          에서 진행한다. */}
         </p>
       </div>
       <ApiValidator
