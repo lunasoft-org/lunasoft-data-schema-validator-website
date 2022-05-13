@@ -2,13 +2,22 @@ import { plainToInstance } from "class-transformer";
 import { validateSync } from "class-validator";
 import { useState } from "react";
 
+type StringifiedObjectType = string;
+
 export const ApiValidator: React.FC<{
   cls: any;
   apiName: string;
-  defaultValue?: string;
-}> = ({ cls, apiName, defaultValue }) => {
+  defaultValueJSON?:
+    | StringifiedObjectType
+    | unknown[]
+    | Record<string, unknown>;
+}> = ({ cls, apiName, defaultValueJSON }) => {
   const [testingTargetRaw, setTestingTargetRaw] = useState(
-    defaultValue ?? "{}"
+    defaultValueJSON !== undefined
+      ? typeof defaultValueJSON === "string" // checking whether typeof defaultValue extends StringifiedObjectType
+        ? defaultValueJSON
+        : JSON.stringify(defaultValueJSON)
+      : JSON.stringify({})
   );
   const [isEverChanged, setIsEverChanged] = useState(false);
   const errors: string[] = [];
