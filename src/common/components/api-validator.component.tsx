@@ -43,6 +43,7 @@ export const ApiValidator: React.FC<{
           )
         )
       );
+      return null;
     });
   } catch (error) {
     if (error instanceof SyntaxError) {
