@@ -9,6 +9,7 @@ jobs:
   Deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - run: yarn
       - run: yarn build
       - run: git config user.name github-actions
