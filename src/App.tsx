@@ -23,8 +23,10 @@ function App() {
           <br />
           <br />각 항목에 대해 <span className="font-bold">모범 예시값</span>이
           주어진다. 모든 항목이{" "}
-          <span className=" bg-green-400 px-2 py-1 rounded-md">초록색</span>의
-          "테스트 통과"를 표시하고 있으면 테스트 통과이다.
+          <span className=" bg-green-400 px-2 py-1 rounded-md dark:text-black">
+            초록색
+          </span>
+          의 "테스트 통과"를 표시하고 있으면 테스트 통과이다.
           <br />각 항목에 대한 스키마 정의는{" "}
           <span className="font-bold">API 문서</span>를 확인하면 된다.
           <br />
