@@ -57,7 +57,7 @@ export const ApiValidator: React.FC<{
     <div className="flex flex-col gap-3 border-t pt-14 border-zinc-400">
       <h2 className=" text-4xl font-bold">
         '{apiName}'{" "}
-        <span className=" text-zinc-400">
+        <span className=" text-zinc-500">
           기능에 대한 대한 데이터 스키마 테스트
         </span>
       </h2>
@@ -65,7 +65,7 @@ export const ApiValidator: React.FC<{
         <div className="md:flex-1">
           <label
             htmlFor={apiName}
-            className="text-sm mb-1 font-bold text-zinc-700"
+            className="text-sm mb-1 font-bold text-zinc-700 dark:text-zinc-300"
           >
             테스트할 값 (JSON){" "}
             <span className=" text-xs font-medium text-zinc-500">
@@ -78,19 +78,19 @@ export const ApiValidator: React.FC<{
             onChange={testingTargetTextareaOnchangeHandler}
             value={testingTargetRaw}
             rows={2}
-            className="border w-full p-3 rounded-xl border-zinc-400 rounded-br-none"
+            className="border w-full p-3 rounded-xl border-zinc-400 rounded-br-none dark:text-black"
           ></textarea>
         </div>
         <div className="md:flex-1">
-          <label className=" text-sm mb-1 font-bold text-zinc-700">
+          <label className=" text-sm mb-1 font-bold text-zinc-700 dark:text-zinc-300">
             테스트 결과
           </label>
           <div
             className={`p-3 pl-10 rounded-xl ${
               isEverChanged === false
-                ? "bg-amber-400"
+                ? "bg-amber-400 dark:text-black"
                 : errors.length === 0
-                ? "bg-green-400"
+                ? "bg-green-400 dark:text-black"
                 : "bg-red-500 text-white"
             }`}
           >

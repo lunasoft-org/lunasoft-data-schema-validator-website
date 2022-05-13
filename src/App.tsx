@@ -10,7 +10,7 @@ import { ApiValidator } from "./product-api/components/api-validator.component";
 
 function App() {
   return (
-    <div className=" max-w-6xl mx-auto px-10 flex flex-col gap-14 my-20">
+    <div className=" max-w-6xl mx-auto px-10 flex flex-col gap-14 my-20 dark:text-white">
       <h1 className=" text-5xl font-bold break-normal">
         루나소프트 카카오 챗봇 연동용 <br />
         '상품 및 카테고리' 데이터 스키마 테스팅 툴
