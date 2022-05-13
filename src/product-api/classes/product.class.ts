@@ -18,7 +18,7 @@ export class Product {
   product_no: number;
 
   @IsString()
-  product_ame: string;
+  product_name: string;
 
   @IsNumber()
   product_price: number;
