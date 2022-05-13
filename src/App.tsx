@@ -6,8 +6,8 @@ import {
   ProductCounterContainer,
   ProductListContainer
 } from "./product-api/classes/product.class";
-import { ApiValidatorGroupTitle } from "./product-api/components/api-validator-group-title.component";
-import { ApiValidator } from "./product-api/components/api-validator.component";
+import { ApiValidatorGroupTitle } from "./common/components/api-validator-group-title.component";
+import { ApiValidator } from "./common/components/api-validator.component";
 
 function App() {
   return (
