@@ -80,17 +80,6 @@ export const ApiValidator: React.FC<{
             rows={2}
             className="border w-full p-3 rounded-xl border-zinc-400 rounded-br-none"
           ></textarea>
-          <div className="text-right">
-            <span
-              className="text-sm text-red-600 underline cursor-pointer hover:text-red-400 active:text-red-900"
-              onClick={() => {
-                setTestingTargetRaw("{}");
-                setIsEverChanged(true);
-              }}
-            >
-              입력창 비우기
-            </span>
-          </div>
         </div>
         <div className="md:flex-1">
           <label className=" text-sm mb-1 font-bold text-zinc-700">
