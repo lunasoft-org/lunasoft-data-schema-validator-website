@@ -42,7 +42,7 @@ function App() {
           category: [
             {
               full_category_no: { "1": 10000, "2": 0, "3": 0, "4": 0 },
-              category_name: "LUSH",
+              category_name: "cateogory 1",
               root_category_no: "10000",
               use_yn: true,
               category_no: 10000,
@@ -51,7 +51,7 @@ function App() {
             },
             {
               full_category_no: { "1": 10000, "2": 10001, "3": 0, "4": 0 },
-              category_name: "제품",
+              category_name: "category a",
               root_category_no: "10000",
               use_yn: true,
               category_no: 10001,
@@ -73,17 +73,33 @@ function App() {
           product: [
             {
               product_thumbnail_image_url:
-                "https://renewtest1.lush.co.kr/upload/heroImage/20211007153449L.jpg",
+                "https://lunasoft.co.kr/images/common/luna-logo-white.png",
               product_discount_price: 0,
               soldout_yn: false,
               product_detail_url:
-                "https://renewtest1.lush.co.kr/products/view/39",
+                "https://n.news.naver.com/mnews/article/018/0005039636?sid=101",
               product_register_date: "2022-03-30 14:17:31",
               sell_yn: true,
               product_modify_date: "2011-01-20 15:17:23",
               product_price: 14000,
               product_no: 39,
-              product_name: "빅 블루",
+              product_name: "상품 1 (할인 없음)",
+              display_yn: true
+            },
+
+            {
+              product_thumbnail_image_url:
+                "https://lunasoft.co.kr/images/common/luna-logo-white.png",
+              product_discount_price: 13000,
+              soldout_yn: false,
+              product_detail_url:
+                "https://n.news.naver.com/mnews/article/018/0005039636?sid=101",
+              product_register_date: "2022-03-30 14:17:31",
+              sell_yn: true,
+              product_modify_date: "2011-01-20 15:17:23",
+              product_price: 14000,
+              product_no: 40,
+              product_name: "상품 2 (할인 혜택 1,000원 적용가격)",
               display_yn: true
             }
           ]
