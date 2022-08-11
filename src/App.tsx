@@ -15,6 +15,7 @@ function App() {
       <h1 className=" text-5xl font-bold break-normal">
         루나소프트 외부 시스템 연동용 데이터 스키마 테스팅 툴
       </h1>
+      <div>1.0.9 버전 기준</div>
       <div>
         <div className="text-sm font-bold">설명</div>
         <p className=" text-lg">
