@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/lunasoft-data-schema-validator-website/static/css/main.fc2a8d2b.css",
+    "main.js": "/lunasoft-data-schema-validator-website/static/js/main.1cc50df2.js",
+    "static/js/787.27d3a32a.chunk.js": "/lunasoft-data-schema-validator-website/static/js/787.27d3a32a.chunk.js",
+    "index.html": "/lunasoft-data-schema-validator-website/index.html",
+    "main.fc2a8d2b.css.map": "/lunasoft-data-schema-validator-website/static/css/main.fc2a8d2b.css.map",
+    "main.1cc50df2.js.map": "/lunasoft-data-schema-validator-website/static/js/main.1cc50df2.js.map",
+    "787.27d3a32a.chunk.js.map": "/lunasoft-data-schema-validator-website/static/js/787.27d3a32a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc2a8d2b.css",
+    "static/js/main.1cc50df2.js"
+  ]
+}
